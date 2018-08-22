@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chat app</title>
+	<script type="text/javascript">
+     M.AutoInit();   
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+     <link rel="stylesheet" type="text/css" href="./css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font -->
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    </style> 
+
+</head>
+<body>
+
+<div class="container">
+    <h1><center>JOB</center></h1>
+    <p><center>Pleasure in the job puts perfection in the work</center></p>
+  <form action="/jobregister" method="POST">  
+  <div class="row">
+    <h2>Personal Details : </h2>
+    <hr>
+    <form class="col s12">
+        <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="name" type="text" name="name" class="validate">
+          <label for="name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="fname" type="text" name="fathername" class="validate">
+          <label for="name">FatherName</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="email" type="email" name="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+          <input id="mobileno" type="text" name="mobileno" class="validate">
+          <label for="mobileno">Mobile no</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="address" type="text" name="address" class="validate">
+          <label for="address">Address</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="city" type="text" name="city" class="validate">
+          <label for="city">City</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="state" type="text" name="state" class="validate">
+          <label for="state">State</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="pincode" type="text" name="pincode" class="validate">
+          <label for="pincode">Pincode</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="country" type="text" name="country" class="validate">
+          <label for="country">Country</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="address" type="text" name="peraddress" class="validate">
+          <label for="peraddress"> Permanant Address</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="city" type="text" name="percity" class="validate">
+          <label for="percity">City</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="perstate" type="text" name="perstate" class="validate">
+          <label for="perstate">State</label>
+        </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="perpincode" type="text" name="perpincode" class="validate">
+          <label for="perpincode">Pincode</label>
+        </div>
+      </div>
+
+      <h2>Educational Deatails :</h2>
+      <hr>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="college" type="text" name="college" class="validate">
+          <label for="college">College</label>
+        </div>
+      </div>
+        
+        <div class="row">
+            <div class="col s12">
+            <label for="degree" name="degree" style="font-size: 16px;"a>Degree</label> 
+        <p>
+        <label>
+        <input value="B.tech" type="radio" name="group1" checked />
+        <span>B.tech</span>
+      </label >
+      <label>
+        <input value ="M.tech" type="radio" name="group1" />
+        <span>M.tech</span>
+      </label>
+      <label>
+        <input value="B.C.A." type="radio"  name="group1" />
+        <span>B.C.A.</span>
+      </label >
+      <label>
+        <input value="M.C.A." type="radio"  name="group1"  />
+        <span>M.C.A.</span>
+      </label>
+      <label>
+        <input value="other" type="radio"  name="group1"  />
+        <span>other</span>
+      </label>
+        </p>
+    </div>
+        </div>
+
+           <div class="row">
+            <div class="col s12">
+            <label for="specilization" name="specilization" style="font-size: 16px;"a>Specilization</label> 
+        <p>
+        <label>
+        <input value="CS/IT/SE" type="radio" name="group2" checked />
+        <span>CS/IT/SE</span>
+      </label >
+      <label>
+        <input value ="EE/ECE/EEE" type="radio" name="group2" />
+        <span>EE/ECE/EEE</span>
+      </label>
+        <label>
+        <input value="other" type="radio"  name="group2"  />
+        <span>other</span>
+      </label>
+        </p>
+    </div>
+        </div>
+
+        <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="startyear" type="text" name="startyear" class="validate">
+          <label for="startyear">Start Year</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="endyear" type="text" name="endyear" class="validate">
+          <label for="endyear">End Year</label>
+        </div>
+      </div>
+
+
+
+        <h2>Professional Details :</h2>
+        <hr>
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="designation" type="text" name="designation" class="validate">
+          <label for="designation">Designation</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="organisation " type="text" name="organisation" class="validate">
+          <label for="organisation">Organisation </label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="experience" type="text" name="experience" class="validate">
+          <label for="experience">Experience</label>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="col s12">
+            <label for="job" name="job" style="font-size: 16px;"a>Applying for :</label> 
+        <p>
+        <label>
+        <input value="job" type="radio" name="group3" checked />
+        <span>job</span>
+      </label >
+      <label>
+        <input value ="internship" type="radio" name="group3" />
+        <span>internship</span>
+      </label>
+        </p>
+    </div>
+        </div>
+
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="resume " type="text" name="resume " class="validate">
+          <label for="resume">Resume Link </label>
+        </div>
+      </div>
+
+
+         <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+           <i class="material-icons prefix">mode_edit</i>
+          <textarea id="message" class="materialize-textarea"></textarea>
+          <label for="message">Why CODING KINGS</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+     <input type="hidden" name="instant" value="0"><div class="input-field col l12 s12 m12 center">
+            <button class="btn waves-effect waves-light" id="btnsubmit" type="submit" name="register">submit </button>
+
+      </div>
+    </form>
+  </div>
+</form>
+</div>
+
+
+
+<script>
+    var btn = document.getElementById("btnsubmit");
+    btn.addEventListener("click" , function(){
+       alert("successfully submited");
+    });
+</script>
+<script>
+    M.AutoInit();
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script type="text/javascript">
+     M.AutoInit();   
+    </script>
+</body>
+</html>

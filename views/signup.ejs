@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chat app</title>
+	<script type="text/javascript">
+     M.AutoInit();   
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+     <link rel="stylesheet" type="text/css" href="./css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font -->
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    </style> 
+
+</head>
+<body>
+
+<div class="container">
+    <h1>signup </h1>
+  <form action="/signup" method="POST">  
+  <div class="row">
+    <form class="col s12">
+        <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="username" type="text" name="username" class="validate">
+          <label for="username">Username</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">vpn_key</i>
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="email" type="email" name="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+          <input id="mobileno" type="text" name="mobileno" class="validate">
+          <label for="mobileno">Mobile no</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+          <input id="college" type="text" name="college" class="validate">
+          <label for="college">College</label>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="col s12">
+            <label for="course" name="course" style="font-size: 16px;"a>Course</label> 
+        <p>
+        <label>
+        <input value="B.tech" type="radio" name="group1" checked />
+        <span>B.tech</span>
+      </label >
+      <label>
+        <input value ="M.tech" type="radio" name="group1" />
+        <span>M.tech</span>
+      </label>
+      <label>
+        <input value="B.C.A." type="radio"  name="group1" />
+        <span>B.C.A.</span>
+      </label >
+      <label>
+        <input value="M.C.A." type="radio"  name="group1"  />
+        <span>M.C.A.</span>
+      </label>
+      <label>
+        <input value="other" type="radio"  name="group1"  />
+        <span>other</span>
+      </label>
+        </p>
+    </div>
+        </div>
+
+         <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+           <i class="material-icons prefix">mode_edit</i>
+          <textarea id="message" class="materialize-textarea"></textarea>
+          <label for="message">Message</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+     <input type="hidden" name="instant" value="0"><div class="input-field col l12 s12 m12 center">
+            <button class="btn waves-effect waves-light" id="btnsubmit"  type="submit" name="register">submit </button>
+
+      </div>
+    </form>
+  </div>
+</form>
+</div>
+
+
+
+<script>
+    var btn = document.getElementById("btnsubmit");
+    btn.addEventListener("click" , function(){
+       alert("successfully submited");
+    });
+
+</script>
+<script>
+    M.AutoInit();
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script type="text/javascript">
+     M.AutoInit();   
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>navbar</title>
+	<script type="text/javascript">
+     M.AutoInit();   
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font -->
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    </style> 
+
+</head>
+<body>
+
+ <!-- <nav><a href="#" class="brand-logo"  class="sidenav-trigger" >CODING KINGS</a><br></nav> -->
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo left">CODING KINGS</a>
+      <a href="" id="menu" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  
+
+  <ul id="slide-out" class="sidenav">
+    <ul class="collapsible">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/back1.jpg" >
+     </div>
+     
+     <% if(currentUser){ %>   
+     <a href="#user"><img class="circle" src="images/codingkings.png"></a>  
+      <a href="#name"><span class="black-text name"><%=currentUser.username%></span></a>
+      <a href="#email"><span class="black-text email"><%=currentUser.email%></span></a></div></li>
+      <li><a href="/logout" class="waves-effect"><i class="material-icons">lock_open</i>logout</a></li>
+     <% }else{ %>
+     <a href="#user"><img class="circle" src="images/codingkings.png"></a><br><br><br></div></li>
+       <li><a class="waves-effect" href="/signup"><i class="material-icons">person_add</i>signup</a></li>
+      <li><a class="waves-effect" href="/login"><i class="material-icons">person</i>login</a></li>
+      <%}%>
+     
+       <li><a href="/" class="waves-effect"><i class="material-icons">home</i>home</a></li>
+       <li><a href="/earnregistration" class="waves-effect"><i class="material-icons">play_arrow</i>carrer</a></li>
+       <li id="about">
+      <div class="collapsible-header"><i class="material-icons">accessibility</i>about us</div>
+      <div class="collapsible-body">
+         <a href="/team" class="waves-effect">our team</a><br>
+         <a href="/introduction" class="waves-effect">introduction</a><br>
+      </div>
+    </li>
+    <li id="coures">
+      <div class="collapsible-header"><i class="material-icons">store</i>courses</div>
+      <div class="collapsible-body"><span>
+      <a href="/nodejs" class="waves-effect">Node.Js</a><br>
+      <a href="/android" class="waves-effect">Android</a><br>
+      <a href="/java" class="waves-effect">java</a><br>
+      <a href="/cpp" class="waves-effect">C++</a><br>
+      <a href="/python" class="waves-effect">python</a><br>
+      <a href="/machine" class="waves-effect">Machine learning</a><br>
+      </span></div>
+    </li>
+  </ul>
+</ul>
+
+
+<script>
+    var menu = document.getElementById("menu");
+    menu.addEventListener("click" , function(){
+     menu.data-target = "slide-out";      
+    });
+</script>
+
+<script>
+    M.AutoInit();
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script>
+    /*var about = document.getElementById("about");
+    var team = document.getElementById("team");
+    var team = document.getElementById("team");
+      var divider = document.getElementById("divider");
+  /**/ /* about.addEventListener("mouseover" , function(){
+      this.classList.add("about");
+      team.style.display = "block";
+      intro.style.display = "block";
+      divider.style.display = "block";
+    });
+
+    about.addEventListener("mouseleave" , function(){
+     team.style.display = "none";
+      intro.style.display = "none";
+      divider.style.display = "none";
+    }); */
+
+   /* $(document).ready(function(){
+    $("#about").mouseover(function(){
+         team.style.display = "block";
+      intro.style.display = "block";
+      divider.style.display = "block";
+        $("#about").slideDown("fast");
+    });
+});
+
+    $(document).ready(function(){
+    $("#team").mouseover(function(){
+         team.style.display = "block";
+         intro.style.display = "block";
+         divider.style.display = "block";
+     });
+});
+
+
+    $(document).ready(function(){
+    $("#team").mouseout(function(){
+         team.style.display = "none";
+          intro.style.display = "none";
+           divider.style.display = "none";
+     });
+});
+
+
+    $(document).ready(function(){
+    $("#intro").mouseover(function(){
+         team.style.display = "block";
+         intro.style.display = "block";
+         divider.style.display = "block";
+     });
+});
+
+
+    $(document).ready(function(){
+    $("#intro").mouseout(function(){
+        team.style.display = "none";
+         intro.style.display = "none";
+          divider.style.display = "none";
+     });
+});
+
+
+
+
+
+
+
+
+    $(document).ready(function(){
+    $("#about").mouseleave(function(){
+        team.style.display = "none";
+      intro.style.display = "none";
+      divider.style.display = "none";
+        $("#about").slideUp("fast");
+    });
+});*/
+ // document.addEventListener('DOMContentLoaded', function() {
+ //    var elems = document.querySelectorAll('.collapsible');
+ //    var instances = M.Collapsible.init(elems, options);
+ //  });
+
+  // Or with jQuery
+
+  // $(document).ready(function(){
+  //   $('.collapsible').collapsible();
+  // });
+
+
+
+  /*$('.pushpin-demo-nav').each(function() {
+    var $this = $(this);
+    var $target = $('#' + $(this).attr('data-target'));
+    $this.pushpin({
+      top: $target.offset().top,
+      bottom: $target.offset().top + $target.outerHeight() - $this.height()
+    });
+  });*/
+  
+</script>
+
+</body>
+</html>

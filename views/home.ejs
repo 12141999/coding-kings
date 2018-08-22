@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coding kings</title>
+	<script type="text/javascript">
+     M.AutoInit();   
+    </script>
+
+  
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font -->
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    </style> 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+<% include header %>
+
+<div class="section1">
+
+  <style type="text/css">  
+        body {  
+            margin: 0;  
+            background: #e6e6e6;  
+        }  
+        .showSlide {  
+            display: none  
+        }  
+            .showSlide img {  
+                width: 100%;  
+            }  
+        .slidercontainer {  
+            /*max-width: 1000px;  */
+            position: relative;  
+            margin: auto;  
+        }  
+        .left, .right {  
+            cursor: pointer;  
+            position: absolute;  
+            top: 50%;  
+            width: auto;  
+            padding: 16px;  
+            margin-top: -22px;  
+            color: white;  
+            font-weight: bold;  
+            font-size: 18px;  
+            transition: 0.6s ease;  
+            border-radius: 0 3px 3px 0;  
+        }  
+        .right {  
+            right: 0;  
+            border-radius: 3px 0 0 3px;  
+        }  
+            .left:hover, .right:hover {  
+                background-color: rgba(115, 115, 115, 0.8);  
+            }  
+        .content {  
+            color: #eff5d4;  
+            font-size: 25px;  
+            padding: 8px 12px;  
+            position: absolute;  
+            top: 10px;  
+            width: 100%;  
+            text-align: center;  
+        }  
+        .active {  
+            background-color: #717171;  
+        }  
+        /* Fading animation */  
+        .fade {  
+            -webkit-animation-name: fade;  
+            -webkit-animation-duration: 1.5s;  
+            animation-name: fade;  
+            animation-duration: 1.5s;  
+        }  
+        @-webkit-keyframes fade {  
+            from {  
+                opacity: .4  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
+  
+        @keyframes fade {  
+            from {  
+                opacity: .4  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
+    </style>  
+    <div class="slidercontainer">  
+        <!-- <div class="showSlide fade" style="height: 580px;">  
+            <img src="images/coding1.jpg" style="height: 560px;" />  
+            <div class="content">
+                        <h2 style="font-size: 41px;" >ADMISSION TESTS FOR AUGUST BATCHES ARE HERE!</h2>
+                       <p  style="font-size: 18px;" class="white-text">Win upto 75% scholarship on courses at Coding kings this fall</p><br><br><br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <a href="/signup" class="waves-effect waves-light btn-large">Apply for apat</a>
+                      <a class="waves-effect waves-light btn-large">Apply for capt</a>
+                  </div>
+              </div>
+            </div>  
+        </div>   -->
+        <div class="showSlide fade" >  
+            <img src="images/coding2.png" style="height: 560px;" />  
+            <div class="content">
+                <h2 style="font-size: 41px;" >Admissions open for August batches</h2>
+                      <p  style="font-size: 18px;" class="white-text">Get enrolled now!</p><br><br><br>
+                      <a href="/courses" class="waves-effect waves-light btn-large">courses</a>
+                    </div>
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="images/coding3.jpg" style="height: 560px;"/>  
+                    <div class="content">
+                    <h2 style="font-size: 41px;" >THE BEST CAMPUS AMBASSADOR PROGRAM IS HERE!</h2>
+                    <p style="font-size: 18px;" class="white-text">Do the best summer internship this year by becoming a Coding Blocks Ambassador for your campus, and win coupons, merchandise, certificates, and CASH.</p><br><br><br>
+                    <a href="/earnregistration" class="waves-effect waves-light btn-large">DETAILS AND REGISTRATION</a>
+                    </div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="images/coding1.jpg" style="height: 560px;"/>  
+            <div class="content">
+                <h2 style="font-size: 41px;" >Presenting the country's best online courses</h2>
+                <p style="font-size: 18px;" class="white-text">Learn at your own pace, Best mentors from IITS - NIT - DTU - NSIT - BITS, with all the benefits of classroom courses and 24/7 mentor support.
+                Rs. 1000 off on all courses, use FLAT1000</p><br><br><br>
+           <div class="row">
+              <div class="col-md-6">
+              <a href="/courses" class="waves-effect waves-light btn-large">GET RS 1000 DISCOUNT</a>
+              <a class="waves-effect waves-light btn-large">CALL US NOW: 9783730301</a>
+              </div>
+          </div>  
+        </div>  
+      </div>  
+
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)">â®</a>  
+        <a class="right" onclick="nextSlide(1)">â¯</a>  
+   
+  
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+    </script> 
+  
+</div>
+
+
+<div class="section2">
+    <div id="card">
+    <h2>CLASSROOM COURSES</h2><br>
+    <p>Classroom courses for all stages, with equal focus on theory and implementation</p>
+    <br><br><br>
+    </div>
+    <div class="row">
+        <div class="img-responsive">
+    <div class="col s12 m6 l4">
+             <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/machine.jpg"><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">MACHINE LEARNING<i class="material-icons right">more_vert</i></span>
+      <p><a href="/courseregister" class="waves-effect waves-light btn-large">RESISTER</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">MACHINE LEARNING<i class="material-icons right">close</i></span>
+      <p>Machine learning with A.I.</p>
+    </div>
+    </div>
+   </div>
+
+<div class="col s12 m6 l4">
+             <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/nodejs.png"><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">NODE.JS<i class="material-icons right">more_vert</i></span>
+      <p><a href="/courseregister" class="waves-effect waves-light btn-large">RESISTER</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">NODE.JS<i class="material-icons right">close</i></span>
+      <p>Backend in node js with mongodb database</p>
+    </div>
+    </div>
+   </div>
+
+<div class="col s12 m6 l4">
+             <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/c++.png">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">C++ <i class="material-icons right">more_vert</i></span>
+     <p><a href="/courseregister" class="waves-effect waves-light btn-large">RESISTER</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">C++<i class="material-icons right">close</i></span>
+      <p>Programing fundamentals in C++</p>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="kiku">
+<div class="row">
+<div class="col s12 m6 l4">
+             <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/android.jpg"><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">ANDROID<i class="material-icons right">more_vert</i></span>
+    <p><a href="/courseregister" class="waves-effect waves-light btn-large">RESISTER</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">ANDROID<i class="material-icons right">close</i></span>
+      <p>App development in android</p>
+    </div>
+    </div>
+</div>
+
+
+<div class="col s12 m6 l4">
+             <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/java.png"><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">JAVA<i class="material-icons right">more_vert</i></span>
+     <p><a href="/courseregister" class="waves-effect waves-light btn-large">RESISTER</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">JAVA<i class="material-icons right">close</i></span>
+      <p>Programing with java</p>
+    </div>
+    </div>
+</div>
+
+<div class="col s12 m6 l4">
+             <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/python.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">PYTHON<i class="material-icons right">more_vert</i></span>
+     <p><a href="/courseregister" class="waves-effect waves-light btn-large">RESISTER</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">PYTHON<i class="material-icons right">close</i></span>
+      <p>programing in Python</p>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="section3">
+    <div class="jumbotron">
+    <h1>TEAM</h1><br><br>
+        <div class="row">
+            <div class="col s12 m6 l4" style="margin-top: 50px;">
+               <div class="margin">
+               <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                         <div class="front">
+                            <img id="image" src="images/robin.jpg" class="circle" >
+                            <h2>ROBIN JAIN</h2>
+                            <p>FOUNDER OF CODING-KINGS</p>
+                         </div>
+                         <div class="back">
+            
+                            <h2 style="color:black;">FOUNDER</h2>
+                            <P>Manmohan Gupta (Munna Bhaiya), an IIT-Delhi graduate, is an ace programmer, technocrat, an entrepreneurial doyen and a mathematician. He has co-founded Software giant, Nagarro and Vidyamandir Classes(VMC). Having seen both the industries from up close, he could identify a key gap between college education and industry needs and has now set out to carve the path that will turn even ordinary students into industry-ready coders.</P>
+                         </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+            <div class="col s12 m6 l4" style="margin-top: 50px;">
+               <div class="margin">
+               <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                         <div class="front">
+                            <img id="image" src="images/robin.jpg" class="circle" >
+                            <h2>ROBIN JAIN</h2>
+                            <p>FOUNDER OF CODING-KINGS</p>
+                         </div>
+                         <div class="back">
+            
+                            <h2 style="color:black;">FOUNDER</h2>
+                            <P>Manmohan Gupta (Munna Bhaiya), an IIT-Delhi graduate, is an ace programmer, technocrat, an entrepreneurial doyen and a mathematician. He has co-founded Software giant, Nagarro and Vidyamandir Classes(VMC). Having seen both the industries from up close, he could identify a key gap between college education and industry needs and has now set out to carve the path that will turn even ordinary students into industry-ready coders.</P>
+                         </div>
+                    </div>
+              </div>
+            </div>
+            </div>
+            
+            <div class="col s12 m6 l4" style="margin-top: 50px;">
+                <div class="margin">
+               <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                         <div class="front">
+                            <img id="image" src="images/robin.jpg" class="circle" >
+                            <h2>ROBIN JAIN</h2>
+                            <p>FOUNDER OF CODING-KINGS</p>
+                         </div>
+                         <div class="back">
+            
+                            <h2 style="color:black;">FOUNDER</h2>
+                            <P>Manmohan Gupta (Munna Bhaiya), an IIT-Delhi graduate, is an ace programmer, technocrat, an entrepreneurial doyen and a mathematician. He has co-founded Software giant, Nagarro and Vidyamandir Classes(VMC). Having seen both the industries from up close, he could identify a key gap between college education and industry needs and has now set out to carve the path that will turn even ordinary students into industry-ready coders.</P>
+                         </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m6 l4" style="margin-top: 50px;">
+            <div class="margin">
+               <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                         <div class="front">
+                            <img id="image" src="images/robin.jpg" class="circle" >
+                            <h2>ROBIN JAIN</h2>
+                            <p>FOUNDER OF CODING-KINGS</p>
+                         </div>
+                         <div class="back">
+            
+                            <h2 style="color:black;">FOUNDER</h2>
+                            <P>Manmohan Gupta (Munna Bhaiya), an IIT-Delhi graduate, is an ace programmer, technocrat, an entrepreneurial doyen and a mathematician. He has co-founded Software giant, Nagarro and Vidyamandir Classes(VMC). Having seen both the industries from up close, he could identify a key gap between college education and industry needs and has now set out to carve the path that will turn even ordinary students into industry-ready coders.</P>
+                         </div>
+                    </div>
+              </div>
+            </div>
+            </div>
+
+             <div class="col s12 m6 l4" style="margin-top: 50px;">
+            <div class="margin">
+               <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                         <div class="front">
+                            <img id="image" src="images/robin.jpg" class="circle" >
+                            <h2>ROBIN JAIN</h2>
+                            <p>FOUNDER OF CODING-KINGS</p>
+                         </div>
+                         <div class="back">
+            
+                            <h2 style="color:black;">FOUNDER</h2>
+                            <P>Manmohan Gupta (Munna Bhaiya), an IIT-Delhi graduate, is an ace programmer, technocrat, an entrepreneurial doyen and a mathematician. He has co-founded Software giant, Nagarro and Vidyamandir Classes(VMC). Having seen both the industries from up close, he could identify a key gap between college education and industry needs and has now set out to carve the path that will turn even ordinary students into industry-ready coders.</P>
+                         </div>
+                    </div>
+              </div>
+            </div>
+            </div>
+
+             <div class="col s12 m6 l4" style="margin-top: 50px;">
+            <div class="margin">
+               <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                         <div class="front">
+                            <img id="image" src="images/robin.jpg" class="circle" >
+                            <h2>ROBIN JAIN</h2>
+                            <p>FOUNDER OF CODING-KINGS</p>
+                         </div>
+                         <div class="back">
+            
+                            <h2 style="color:black;">FOUNDER</h2>
+                            <P>Manmohan Gupta (Munna Bhaiya), an IIT-Delhi graduate, is an ace programmer, technocrat, an entrepreneurial doyen and a mathematician. He has co-founded Software giant, Nagarro and Vidyamandir Classes(VMC). Having seen both the industries from up close, he could identify a key gap between college education and industry needs and has now set out to carve the path that will turn even ordinary students into industry-ready coders.</P>
+                         </div>
+                    </div>
+              </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div><br><br><br><br><br><br><br><br>
+
+
+
+<div id="section4">
+    <div class="container">
+    <div class="row">
+        <div class="col s12 m12 l4">
+            <h1>SEND MESSAGE</h1>
+
+  <div class="row">
+    <form  method="POST" action="/message">
+      <div class="row">
+        <div class="input-field col s12">
+          <input  id="name" type="text" class="validate" name="Name">
+          <label for="name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="subject" type="text" class="validate" name="subject">
+          <label for="subject">Subject</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+          <textarea id="message" class="materialize-textarea" name="message"></textarea>
+          <label for="message">Message</label>
+        </div>
+      </div>
+      <button id="sendmessage" type="submit" id="btnsubmit" class="btn waves-effect waves-teal">SEND MESSAGE</button>
+    </form>
+  </div>
+        </div>
+
+        <div class="col s1">
+            
+        </div>
+        <div class="col s12 m12 l7">
+            <!-- <h1>CHECK MY LOCATION</h1> -->
+
+            <div id="gmap">
+<div id="map" ></div>
+<script>
+
+function myMap() {
+  
+  var myCenter = new google.maps.LatLng(<%=data.lat%>,<%=data.lng%>);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 18};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfeJEhYBehzdv61AfFCdcqwZ_J2DcrzWM&callback=myMap"></script>
+
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    M.AutoInit();
+
+
+//alert
+  var btn = document.getElementById("btnsubmit");
+    btn.addEventListener("click" , function(){
+       alert("successfully submited");
+    });
+
+
+</script>
+
+<%include footer%>
+</body>
+</html>
